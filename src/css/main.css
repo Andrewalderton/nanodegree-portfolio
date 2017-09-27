@@ -1,9 +1,15 @@
 /* General Styles */
+html {
+	box-sizing: border-box;
+	height:100%;
+}
+
 body {
-	min-height: 1000px;
+	min-height: 100%;
+	position: relative;
     padding: 100px 0;
     font: normal 200 1.5em/1.5em "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #414141;
+	color: #1BA5B8;
 	background-color: #fff;
 	position: relative;
 }
@@ -21,13 +27,14 @@ h6 {
 
 h1 {
 	letter-spacing: -0.05em;
-	margin: 0;
+	margin: 0 0 0 1em;
 }
 
 h2 {
 	letter-spacing: -0.02em;
 	font-weight: 500;
-	margin: 0 0 0.5em 0;
+	margin: 0 0 1em 0;
+	color: #012D41;
 }
 
 h3 {
@@ -36,13 +43,13 @@ h3 {
 
 a {
 	font: bold 1em/1.5em "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #2bb5cf;
+	color: #012D41;
 	text-decoration: none;
 }
 
 a:hover,
 a:focus {
-	color: #656a71;
+	color: #1BA5B8;
 	text-decoration: none;
 }
 
@@ -54,70 +61,70 @@ p {
 
 /* Navbar Styling */
 .navbar {
-	height: 81px;
-	border-bottom: 1px solid #2bb5cf;
-}
-
-.logo {
-	margin: 5px 0 0 -5px;
-	padding: 0;
-	float: left;
-	border: none;
-}
-
-.navbar-header {
-	max-width: 400px;
+	background-color: #fff;
+	margin: 0;
 }
 
 .navbar-brand {
 	display: inline-block;
-	margin: 0;
-	padding: 10px 0 0 15px;
-	max-width: 180px;
-	height: 30px;
-	font-size: 1.4em;
+	margin: 1em 1em 2em 1em;
+	padding: 1em 0;
+	max-width: 100%;
+	font-size: 1.2em;
 }
 
 .navbar-sub-brand {
-	float: left;
 	display: inline-block;
-	margin: 0;
-	padding: 0;
 	font-size: 0.75em;
-	color: #2f6e8e;
+	color: #012D41;
+	margin: 0 1em 0 1em;
 }
 
 .collapse {
-	background-color: #f8f8f8;
+	background-color: #fff;
 }
 
 .navbar-right {
-	margin: 15px auto;
+	margin: 1rem 1rem 2rem 1rem;
+	padding: 1rem 0 0 0;
+}
+
+button.navbar-toggle.collapsed {
+	margin-right: 0;
+}
+
+#navbar > ul > li > a {
+	color: #012D41;
 }
 
 
 /* Images */
 img {
 	max-width: 100%;
-	border-bottom: 2px solid #2bb5cf;
+	border-bottom: 2px solid #012D41;
 }
 
 .main-img {
 	margin: auto;
+	margin-bottom: -5em;
 	position: relative;
 	overflow: hidden;
-    max-height: 525px;
+    max-height: 425px;
     width: 1200px;
     object-fit: cover;
-    border-bottom: 2px solid #2bb5cf;
+    border-bottom: 2px solid #012D41;
 }
 
 
 /* Portfolio */
+#portfolio {
+	padding-top: 6em;
+}
+
 .featured-section {
-	margin: 1em 0;
+	margin: 1em 0 0 0;
 	padding: 1em 0;
-	font-size: 1.5em;
+	font-size: 1.25em;
 	font-weight: bold;
 }
 
@@ -137,12 +144,12 @@ img {
 }
 
 .featured-text {
-	color: #777;
+	color: #1BA5B8;
 	padding: 0 0 1em;
 }
 
 
-/* Fixed Footer */
+/* Footer */
 footer {
 	text-align: center;
 	position: absolute;
@@ -150,7 +157,7 @@ footer {
     bottom: 0;
 	left: 0;
 	padding: 1em;
-	background-color: #f8f8f8;
+	background-color: #DAECF3;
 }
 
 
@@ -165,12 +172,11 @@ footer {
 
 /* About Page */
 .profile-photo {
-	display: inline-block;
 	float: left;
 	max-width: 150px;
 	margin: 3em auto;
 	border-radius: 100%;
-	border: 2px solid #2bb5cf;
+	border: 2px solid #012D41;
 }
 
 
@@ -201,7 +207,3 @@ footer {
 .facebook {
 	background-image: url("https://andrewalderton.github.io/nanodegree-portfolio/img/facebook.png");
 }
-
-
-
-
