@@ -6,12 +6,12 @@ html {
 
 body {
 	min-height: 100%;
+	max-width: 100%;
 	position: relative;
     padding: 100px 0;
     font: normal 200 1.5em/1.5em "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #1BA5B8;
 	background-color: #fff;
-	position: relative;
 }
 
 h1,
@@ -33,7 +33,7 @@ h1 {
 h2 {
 	letter-spacing: -0.02em;
 	font-weight: 500;
-	margin: 0 0 1em 0;
+	margin: 0 0 0.5em 0;
 	color: #012D41;
 }
 
@@ -98,6 +98,24 @@ button.navbar-toggle.collapsed {
 }
 
 
+/* Main Header */
+.main-header {
+	position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+	text-align: center;
+	margin: auto;
+	font: 700 1.5em/2em 'Montserrat' , sans-serif;
+	color: #012D41;
+}
+
+.main-icon {
+	padding-top: 1em;
+	color: #012D41;
+}
+
+
 /* Images */
 img {
 	max-width: 100%;
@@ -106,19 +124,48 @@ img {
 
 .main-img {
 	margin: auto;
-	margin-bottom: -5em;
+	margin-bottom: -6em;
 	position: relative;
 	overflow: hidden;
     max-height: 425px;
     width: 1200px;
     object-fit: cover;
-    border-bottom: 2px solid #012D41;
+	border-bottom: 2px solid #012D41;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-filter: opacity(50%);
+    filter: opacity(50%);
+}
+
+.certificate {
+	display: inline-block;
+	max-width: 48%;
+	padding: 0 2em 1em 2em;
+	border-bottom: none;
+}
+
+.th-logo {
+	padding: 0 2em 1em 2em;
+	border-bottom: none;
+	height: 50%;
+	width: 50%;
+}
+
+.cw-logo {
+	max-height: 50%;
+	max-width: 44%;
+	padding-top: 1.5em;
+}
+
+.cw-badge {
+	width: 200%;
+	padding: 1.5em;
 }
 
 
 /* Portfolio */
 #portfolio {
-	padding-top: 6em;
+	padding-top: 9em;
 }
 
 .featured-section {
@@ -141,11 +188,47 @@ img {
 	.featured-heading:nth-child(5) {
 		clear: left;
 	}
+	.th-logo {
+		float: left;
+		max-width: 32%;
+	}
+	.cw-logo {
+		float: left;
+		max-height: 50%;
+		max-width: 25%;
+		padding-top: 1em;
+	}
 }
 
 .featured-text {
 	color: #1BA5B8;
 	padding: 0 0 1em;
+	font-size: 0.8em;
+}
+
+.report-card {
+	background-color: #DAECF3;
+	margin: 1em 0 2em;
+	padding: 1em;
+	font-size: 1em;
+}
+
+.align {
+	text-align: center;
+}
+
+@media screen and (max-width: 425px) {
+	.cw-logo {
+		float: none;
+		max-width: 40%;
+	}
+	.th-logo {
+		float: none;
+		max-width: 50%;
+	}
+	.certificate {
+		padding: 0 1em 1em 1em;
+	}
 }
 
 
@@ -167,6 +250,11 @@ footer {
 	height: 20px;
 	margin: 0 5px;
 	border: 0;
+}
+
+.invert {
+    -webkit-filter: invert(100%);
+    filter: invert(55%);
 }
 
 
@@ -204,6 +292,7 @@ footer {
 	background-image: url("https://andrewalderton.github.io/nanodegree-portfolio/img/twitter.png");
 }
 
-.facebook {
-	background-image: url("https://andrewalderton.github.io/nanodegree-portfolio/img/facebook.png");
+.github {
+	display: inline-block;
+	background-image: url("https://andrewalderton.github.io/nanodegree-portfolio/img/github.png");
 }
