@@ -49,7 +49,7 @@ gulp.task('distCopy', function(done) {
 gulp.task('mini-html', function(done) {
   gulp.src('src/*.html')
   .pipe(htmlReplace({js: 'js/vendor.min.js', js2: 'js/main.min.js', css: 'css/vendor.min.css', css2: 'css/main.min.css', css3: 'css/badges.min.css'}))
-  .pipe(critical({base: 'src/tmp', inline: true, minify: true, css: ['src/css/main.css', 'src/css/badges.css'] }))
+  // .pipe(critical({base: 'src/tmp', inline: true, minify: true, css: ['src/css/main.css', 'src/css/badges.css'] }))
   .pipe(minifyhtml({collapseWhitespace: true}))
   .pipe(plumber())
   .pipe(gulp.dest('dist/'));
