@@ -169,7 +169,7 @@ img {
 }
 
 .featured-section {
-	margin: 1em 0 0 0;
+	margin: 2em 0 0 0;
 	padding: 1em 0;
 	font-size: 1.25em;
 	font-weight: bold;
@@ -295,4 +295,17 @@ footer {
 .github {
 	display: inline-block;
 	background-image: url("https://andrewalderton.github.io/nanodegree-portfolio/img/github.png");
+}
+
+/* Video styles */
+.vimeo {
+	padding-right: 2px;
+	margin: 0;
+}
+iframe {
+	max-height: 360px;
+	max-width: 100%;
+	display: inline-grid;
+  	grid-gap: 5px;
+	margin-bottom: 2em;
 }
