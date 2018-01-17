@@ -31,12 +31,12 @@
             const vimeo = document.getElementById('vimeo');
             const results = body.data;
             results.forEach(function(result) {
-                let element = document.createElement('div');
-                element.setAttribute("class", "vimeo col-md-6");
-                let name = result.name;
-                let embed = result.embed.html;
-                element.innerHTML = '<h2>' + name + '</h2><br>' + embed;
-                vimeo.appendChild(element);
+                var el = document.createElement('div');
+                el.setAttribute("class", "vimeo col-md-6");
+                var name = result.name;
+                var embed = result.embed.html;
+                el.innerHTML = '<h2>' + name + '</h2><br>' + embed;
+                vimeo.appendChild(el);
             });
         }
     });

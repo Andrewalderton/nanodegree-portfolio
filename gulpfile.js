@@ -48,7 +48,7 @@ gulp.task('distCopy', function(done) {
 // HTML minifier
 gulp.task('mini-html', function(done) {
   gulp.src('src/*.html')
-  .pipe(htmlReplace({js: 'js/vendor.min.js', js2: 'js/main.min.js', css: 'css/vendor.min.css', css2: 'css/main.min.css', css3: 'css/badges.min.css'}))
+  .pipe(htmlReplace({js: 'js/vendor.min.js', js2: 'js/main.min.js', js3: 'js/vimeo.min.js', css: 'css/vendor.min.css', css2: 'css/main.min.css', css3: 'css/badges.min.css'}))
   // .pipe(critical({base: 'src/tmp', inline: true, minify: true, css: ['src/css/main.css', 'src/css/badges.css'] }))
   .pipe(minifyhtml({collapseWhitespace: true}))
   .pipe(plumber())
@@ -69,7 +69,7 @@ gulp.task('del', function(done) {
   done();
 });
 
-var jsFiles = ['src/js/codewars.js', 'src/js/reportcard.js'];
+var jsFiles = ['src/js/reportcard.js'];
 var yarnSrc = ['src/js/jquery.js', 'src/js/bootstrap.js'];
 
 // JavaScript  minifier
@@ -84,6 +84,13 @@ gulp.task('mini-js', function(done) {
     gulp.src(yarnSrc)
       .pipe(plumber())
       .pipe(concat('vendor.min.js'))
+      .pipe(gulp.dest('dist/js'))
+      .pipe(uglify({mangle: false}))
+      .pipe(gulp.dest('dist/js')),
+
+    gulp.src('dist/js/vimeo.min.js')
+      .pipe(plumber())
+      .pipe(concat('vimeo.min.js'))
       .pipe(gulp.dest('dist/js'))
       .pipe(uglify({mangle: false}))
       .pipe(gulp.dest('dist/js')),
