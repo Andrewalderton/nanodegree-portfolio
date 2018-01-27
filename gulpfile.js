@@ -69,7 +69,7 @@ gulp.task('del', function(done) {
   done();
 });
 
-var jsFiles = ['src/js/reportcard.js'];
+var jsFiles = ['src/js/reportcard.js', 'src/js/codewars.js'];
 var yarnSrc = ['src/js/jquery.js', 'src/js/bootstrap.js'];
 
 // JavaScript  minifier

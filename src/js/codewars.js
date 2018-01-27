@@ -7,12 +7,11 @@
 
     // Reset error status
     this.ajaxError = false;
-    var accessToken = 'hrSTg8_yD6ssxuB36sG3';
-    var codewarsAPI = 'https://www.codewars.com/api/v1/users/andy6';
 
-    // $.ajaxSetup({
-    //     headers: { "Access-Control-Allow-Origin": "http://localhost:8888" }
-    // });
+    var CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
+    var accessToken = 'hrSTg8_yD6ssxuB36sG3';
+
+    var codewarsAPI = CORS_PROXY + 'https://www.codewars.com/api/v1/users/andy6';
 
     $.ajax(codewarsAPI, {
         type: "GET",
@@ -35,4 +34,4 @@
         this.ajaxError = true;
         $('.codewars').html('<p class="info-error">Codewars data not currently available</p>');
     });
-}(jQuery));
+})(jQuery);
